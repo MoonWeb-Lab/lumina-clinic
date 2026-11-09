@@ -87,17 +87,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCalculator }) =
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
 
                 {/* Bottom Overlay Info */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-white/60 shadow-sm">
-                  <div className="flex items-center justify-between">
-                    <div>
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/80 shadow-md z-10">
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="min-w-0">
                       <div className="text-xs font-semibold text-teal-600 uppercase tracking-wider">
                         Цифровой кабинет № 1
                       </div>
-                      <div className="text-sm font-bold text-slate-900">
+                      <div className="text-sm font-bold text-slate-900 leading-snug">
                         Оптика Carl Zeiss + 3D Scanner iTero 5D
                       </div>
                     </div>
-                    <div className="flex items-center gap-1 text-amber-500 font-bold text-sm bg-amber-50 px-2.5 py-1 rounded-lg">
+                    <div className="flex items-center gap-1 text-amber-500 font-bold text-xs sm:text-sm bg-amber-50 border border-amber-200/60 px-2.5 py-1 rounded-lg shrink-0">
                       ★ 5.0
                     </div>
                   </div>
@@ -105,7 +105,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCalculator }) =
               </div>
 
               {/* Floating Badge 1: Top Right */}
-              <div className="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 border border-slate-100 shadow-medical flex items-center gap-3">
+              <div className="absolute -top-4 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 border border-slate-100 shadow-medical flex items-center gap-3 z-20">
                 <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600">
                   <Sparkles className="w-5 h-5" />
                 </div>
@@ -115,8 +115,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCalculator }) =
                 </div>
               </div>
 
-              {/* Floating Badge 2: Bottom Left */}
-              <div className="absolute -bottom-5 -left-4 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 border border-slate-100 shadow-medical flex items-center gap-3">
+              {/* Floating Badge 2: Mid-Left (never overlaps bottom text) */}
+              <div className="absolute top-1/2 -left-4 sm:-left-6 -translate-y-1/2 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 border border-slate-100 shadow-medical flex items-center gap-3 z-20">
                 <div className="w-10 h-10 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
                   <Award className="w-5 h-5" />
                 </div>

@@ -47,7 +47,7 @@ export const DOCTORS: Doctor[] = [
     category: 'Высшая квалификационная категория',
     education: 'БГМУ, мастер-классы Style Italiano (Италия), Лихтенштейн (Ivoclar)',
     certifications: ['Член European Academy of Esthetic Dentistry (EAED)', 'Ivoclar Vivadent Certified Master'],
-    photoUrl: 'https://images.unsplash.com/photo-1594824813580-9285090f4886?auto=format&fit=crop&w=800&q=80',
+    photoUrl: 'https://images.unsplash.com/photo-1651008376811-b90baee60c1f?auto=format&fit=crop&w=800&q=80',
     rating: 4.98,
     availableDays: ['Пн', 'Ср', 'Пт', 'Сб'],
   },

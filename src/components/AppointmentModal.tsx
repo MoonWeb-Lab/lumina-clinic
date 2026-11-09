@@ -282,6 +282,9 @@ export const AppointmentModal: React.FC<AppointmentModalProps> = ({
                         src={doc.photoUrl}
                         alt={doc.name}
                         className="w-11 h-11 rounded-xl object-cover shrink-0"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80';
+                        }}
                       />
                       <div>
                         <div className="text-sm font-bold text-slate-900">{doc.name}</div>
