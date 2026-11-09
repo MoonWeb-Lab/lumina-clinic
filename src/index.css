@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+
+  body {
+    background-color: #F8FAFC;
+    color: #0F172A;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Custom Clean Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F1F5F9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0D9488;
+  }
+}
+
+/* Glassmorphism Clinic Utilities */
+.glass-medical {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-teal {
+  background: rgba(240, 253, 250, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(204, 251, 241, 0.8);
+}
+
+.gradient-teal {
+  background: linear-gradient(135deg, #0D9488 0%, #0F766E 100%);
+}
+
+.gradient-mesh {
+  background-image: 
+    radial-gradient(at 10% 20%, rgba(204, 251, 241, 0.45) 0px, transparent 50%),
+    radial-gradient(at 90% 10%, rgba(224, 242, 254, 0.5) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(240, 253, 250, 0.6) 0px, transparent 50%);
+}
