@@ -76,53 +76,62 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking, onOpenCalculator }) =
           {/* Right Column: High-tech Visual & Live Cards */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Main Clinic Card */}
-              <div className="relative rounded-3xl overflow-hidden border border-slate-200/80 bg-white shadow-medical-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80"
-                  alt="Цифровой кабинет Lumina Clinic Минск"
-                  className="w-full h-[360px] sm:h-[420px] object-cover"
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
+              {/* Outer Framed Showcase Card */}
+              <div className="p-3 bg-white rounded-[32px] border border-slate-200/90 shadow-medical-lg">
+                {/* Photo Container */}
+                <div className="relative rounded-[22px] overflow-hidden aspect-[4/3] sm:aspect-[16/11] bg-slate-900">
+                  <img
+                    src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1000&q=80"
+                    alt="Цифровой кабинет Lumina Clinic Минск"
+                    className="w-full h-full object-cover"
+                    loading="eager"
+                  />
 
-                {/* Bottom Overlay Info */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md border border-white/80 shadow-md z-10">
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="min-w-0">
-                      <div className="text-xs font-semibold text-teal-600 uppercase tracking-wider">
-                        Цифровой кабинет № 1
-                      </div>
-                      <div className="text-sm font-bold text-slate-900 leading-snug">
-                        Оптика Carl Zeiss + 3D Scanner iTero 5D
-                      </div>
+                  {/* Top-Left Live Status Pill */}
+                  <div className="absolute top-3.5 left-3.5 bg-slate-900/85 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full border border-white/15 flex items-center gap-2 text-xs font-semibold shadow-sm z-10">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span>Цифровой кабинет № 1</span>
+                  </div>
+
+                  {/* Top-Right Protocol Rating */}
+                  <div className="absolute top-3.5 right-3.5 bg-white/95 backdrop-blur-md text-slate-900 px-3 py-1.5 rounded-full border border-white/80 flex items-center gap-1.5 text-xs font-bold shadow-sm z-10">
+                    <span className="text-amber-500">★ 5.0</span>
+                    <span className="text-[10px] text-slate-500 font-medium">ITI Protocol</span>
+                  </div>
+
+                  {/* Bottom Integrated Gradient Dock */}
+                  <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-gradient-to-t from-slate-950/95 via-slate-900/75 to-transparent text-white z-10">
+                    <div className="text-[11px] font-bold text-teal-300 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+                      <ShieldCheck className="w-3.5 h-3.5" />
+                      <span>Швейцарские стандарты медицины</span>
                     </div>
-                    <div className="flex items-center gap-1 text-amber-500 font-bold text-xs sm:text-sm bg-amber-50 border border-amber-200/60 px-2.5 py-1 rounded-lg shrink-0">
-                      ★ 5.0
+                    <div className="text-sm sm:text-base font-bold text-white tracking-tight leading-snug">
+                      Оптика Carl Zeiss + 3D Scanner iTero 5D
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Floating Badge 1: Top Right */}
-              <div className="absolute -top-4 -right-4 sm:-right-6 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 border border-slate-100 shadow-medical flex items-center gap-3 z-20">
-                <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600">
-                  <Sparkles className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs text-slate-500">Точность оптики</div>
-                  <div className="text-sm font-bold text-slate-900">Carl Zeiss 30x</div>
-                </div>
-              </div>
+                {/* Sub-cards: High-Tech Spec Highlights */}
+                <div className="grid grid-cols-2 gap-2.5 mt-3">
+                  <div className="p-3 sm:p-3.5 rounded-2xl bg-slate-50/80 border border-slate-100 flex items-center gap-3 hover:bg-teal-50/60 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-teal-100/80 text-teal-700 flex items-center justify-center shrink-0">
+                      <Sparkles className="w-5 h-5 text-teal-600" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-[11px] text-slate-500 font-medium leading-none mb-1">Точность оптики</div>
+                      <div className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Carl Zeiss 30x</div>
+                    </div>
+                  </div>
 
-              {/* Floating Badge 2: Mid-Left (never overlaps bottom text) */}
-              <div className="absolute top-1/2 -left-4 sm:-left-6 -translate-y-1/2 bg-white/95 backdrop-blur-md rounded-2xl p-3.5 border border-slate-100 shadow-medical flex items-center gap-3 z-20">
-                <div className="w-10 h-10 rounded-xl bg-sky-50 flex items-center justify-center text-sky-600">
-                  <Award className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="text-xs text-slate-500">Швейцария</div>
-                  <div className="text-sm font-bold text-slate-900">Straumann Expert</div>
+                  <div className="p-3 sm:p-3.5 rounded-2xl bg-slate-50/80 border border-slate-100 flex items-center gap-3 hover:bg-sky-50/60 transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-sky-100/80 text-sky-700 flex items-center justify-center shrink-0">
+                      <Award className="w-5 h-5 text-sky-600" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-[11px] text-slate-500 font-medium leading-none mb-1">Швейцария</div>
+                      <div className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">Straumann Expert</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
