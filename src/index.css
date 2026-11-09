@@ -12,6 +12,39 @@
     background-color: #F8FAFC;
     color: #0F172A;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    cursor: default;
+  }
+
+  /* Disable blinking insertion caret on text elements when clicked */
+  * {
+    caret-color: transparent;
+  }
+
+  /* Keep default arrow cursor on text so it doesn't turn into an I-beam bar, while preserving text selection & copy */
+  h1, h2, h3, h4, h5, h6, p, span, li, dt, dd, label {
+    cursor: default;
+    user-select: text;
+  }
+
+  /* Keep pointer cursor for interactive controls */
+  a, button, [role="button"], select, input[type="range"], input[type="checkbox"] {
+    cursor: pointer;
+  }
+
+  /* Restore text cursor and blinking caret inside actual form fields */
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea,
+  [contenteditable="true"] {
+    cursor: text !important;
+    caret-color: #0D9488 !important;
+    user-select: text !important;
+  }
+
+  /* Remove focus outline on mouse click */
+  *:focus:not(:focus-visible) {
+    outline: none;
   }
 
   /* Custom Clean Scrollbar */
